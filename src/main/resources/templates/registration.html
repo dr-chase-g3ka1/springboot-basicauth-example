@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Taco Cloud</title>
+</head>
+<body>
+	<h1>Register</h1>
+	<img th:src="@{/images/TacoCloud.png}" />
+	<form method="POST" th:action="@{/register}" th:object="${registrationForm}" id="registerForm">
+		<label for="username">Username: </label> 		<input type="text" 		name="username" 	th:value="*{username}" /><br /> 
+		<label for="password">Password: </label> 		<input type="password" 	name="password" 	th:value=*{password} /><br />
+		<label for="confirm">Confirm password: </label> <input type="password" 	name="confirm"  /><br />
+		<label for="fullname">Full name: </label> 		<input type="text" 		name="fullname" 	th:value=*{fullname} /><br />
+		<label for="street">Street: </label> 			<input type="text" 		name="street" 		th:value=*{street} /><br />
+		<label for="city">City: </label> 				<input type="text" 		name="city" 		th:value=*{city} /><br />
+		<label for="state">State: </label> 				<input type="text" 		name="state" 		th:value=*{state} /><br />
+		<label for="zip">Zip: </label> 					<input type="text" 		name="zip" 			th:value=*{zip} /><br />
+		<label for="email">Email: </label> 				<input type="text" 		name="email" 		th:value=*{email} /><br />
+		<input type="submit" value="Register" />
+	</form>
+</body>
+</html>
+
+<!-- 
+<form method="POST" th:action="@{/register}" th:object="${seedStarter}" id="registerForm">
+		<label for="username">Username: </label> 		<input type="text" 		name="username" 	th:value="*{username}" /><br /> 
+		<label for="password">Password: </label> 		<input type="password" 	name="password" 	th:value=*{password} /><br />
+		<label for="confirm">Confirm password: </label> <input type="password" 	name="confirm"  /><br />
+		<label for="fullname">Full name: </label> 		<input type="text" 		name="fullname" 	th:value=*{fullname} /><br />
+		<label for="street">Street: </label> 			<input type="text" 		name="street" 		th:value=*{street} /><br />
+		<label for="city">City: </label> 				<input type="text" 		name="city" 		th:value=*{city} /><br />
+		<label for="state">State: </label> 				<input type="text" 		name="state" 		th:value=*{state} /><br />
+		<label for="zip">Zip: </label> 					<input type="text" 		name="zip" 			th:value=*{zip} /><br />
+		<label for="email">Email: </label> 				<input type="text" 		name="email" 		th:value=*{email} /><br />
+		<input type="submit" value="Register" />
+	</form>
+
+ -->
